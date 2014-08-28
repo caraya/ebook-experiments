@@ -1,0 +1,180 @@
+/*
+ * Basic reset. It is not complete but a good starting point.
+ */
+html,
+body,
+div,
+img,
+p,
+a,
+ul,
+li {
+  margin:0;padding:0;
+}
+
+/*
+ * Web Font definition.
+ *
+ * We define 4 different fonts in the same family to avoid using faux bold and
+ * italics.
+ *
+ * Font selected is SourceCode Pro from Adobe (Open Source License) and the
+ * weight selected are:
+ *
+ * Light
+ * Semibold
+ *
+ * This font does not have bold styles. We'll have to play with css rules to make the bold styles work.
+ */
+@font-face {
+  font-family: 'Gentium Regular';
+  src: url('type/GentiumPlus-R.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Gentium Italic';
+  src: url('type/GentiumPlus-I.ttf') format('truetype');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Gentium Bold';
+  src: url('type/GentiumPlus-R.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Gentium BoldItalic';
+  src: url('type/GentiumPlus-R.ttf') format('truetype');
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*
+ * Global style definitions
+ *
+ * Styles applied to the HTML element are used throughout the document unless
+ * a more specific style overrides it later
+ */
+
+html {
+  font-family: 'Gentium Regular';
+  font-size: 16px; /* we set up default font size in pixels so we can apply sizing scales */
+  line-height: 1.5;
+}
+
+/*
+ * Generic styles
+ *
+ * Styles using our fonts and other elements. We don't want faux italic and bold
+ * so we go through the xtra pain to add additional fonts.
+ */
+
+em {
+  font-family: 'Gentium Italic';
+}
+
+strong {
+  font-family: 'Gentium Bold';
+}
+
+em strong,
+strong em { /* order of em and strong doesn't matter*/
+  font-family: 'Gentium BoldItalic';
+}
+
+pre {
+  font-family: 'Gentium Regular';
+}
+
+/* Chapter title style
+ *
+ * We center the h1 chapter title
+*/
+section h1 {
+  text-align: center;
+}
+
+/*
+ * Cover Page Styles
+ *
+ * Styles that are specific to the cover page
+*/
+
+div.cover h1,
+div.cover h2,
+div.cover p {
+  text-align:center;
+}
+
+div.cover h1 {
+  font-size: 3em;
+}
+
+div.cover h2 {
+  font-size: 1.5em;
+}
+
+
+/*
+ * Paragraph styles
+ *
+ * We use these generic styles to play with what we can do with a paragraph.
+ *
+ */
+
+p { /* The default spacing between paragraphs looks too crowded to me, I like a little more breating room */
+  margin-bottom: 1em;
+}
+
+p:last-child { /* We want to make sure that the last paragraph has no margin-bottom to prevent it flowing to a new page */
+  margin-bottom: 0;
+}
+/*
+* Upercases the first line of the first paragraph following a section tag  paragraph, regardless of how long it is
+* Commented out for testing. Want to see what it looks like without it
+h1 + p::first-line {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  text-indent: 0;
+}
+*/
+
+/*
+ * Dropcap the first letter of the first paragraph
+*/
+h1 + p::first-letter {
+  float: left;
+  font-size: 7em;
+  line-height: 0.8em;
+  margin-bottom: -0.1em;
+  padding-right: 0.1em;
+}
+
+/*
+ * Indent all paragraphs but the first, we're doing too much with it already
+*/
+/*p:not(:first-child)*/
+p + p {
+  text-indent: 2em;
+}
+
+
+/*
+ * Links and anchor experiments
+ *
+ * External Links are underlined
+ * Internal links are not underlined
+ */
+
+a {
+  text-decoration: none;
+}
+
+a[href^="http"] {
+  text-decoration: underline;
+}
