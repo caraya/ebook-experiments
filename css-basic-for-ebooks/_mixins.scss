@@ -1,0 +1,139 @@
+// We use a single file to declare all our Mixins to make sure we know where to
+// find them rather than have to search all files
+
+// Font declaration for standard web
+@mixin font-declaration($font-family,  $font-file-name, $weight:normal, $style:normal) {
+  font-family: '#{$font-family}';
+  src:
+    local('#{$font-file-name}.ttf') format('truetype'),
+    url('#{$font-file-name}.ttf') format('truetype'),
+    url('#{$font-file-name}.woff') format('woff');
+  font-weight: $weight;
+  font-style: $style;
+
+}
+
+// Font declaration for ebook-related fonts for which we only need the local truetype font
+@mixin ebook-font-declaration($font-family,  $font-file-name, $weight:normal, $style:normal) {
+  font-family: '#{$font-family}';
+  src:
+    local('#{$font-file-name}.ttf') format('truetype');
+  font-weight: $weight;
+  font-style: $style;
+
+}
+
+// This mixin uses the two font declrations above + the is_ebook variable
+// declared in _varaiables.scss to add the right font declaration
+
+@mixin declare-font($font-family,  $font-file-name, $weight:normal, $style:normal) {
+  @debug "$is_ebook evaluates to #{$is_ebook}";
+  @if  ($is_ebook) {
+    @include ebook-font-declaration($font-family,  $font-file-name, $weight:normal, $style:normal);
+
+  }
+  @else {
+    @include font-declaration($font-family,  $font-file-name, $weight:normal, $style:normal);
+  }
+}
+
+@mixin solid-thin() {
+  border-width: thin;
+  border-style: solid;
+}
+
+// This mixin will create column attributes for the element it's called in
+// It uses variables to make life easier. Rather than code multiple attribute
+// sets we use a single set that takes 2 attributes.
+//
+// $cols indicates the number of columns to use
+// $gap indicates the gap between the columns (as in 20px)
+// $fill indicate
+
+@mixin column-attribs ($cols, $gap, $fill: balance, $span: all){
+  -moz-column-count: $cols;
+  -moz-column-gap: $gap;
+  -webkit-column-count: $cols;
+  -webkit-column-gap: $gap;
+  column-count: $cols;
+  column-gap: $gap;
+  /* Properties below have uncertain support */
+  -moz-column-fill: $fill;
+  column-fill: $fill;
+  webkit-column-span: $span;
+  column-span: $span;
+}
+
+// The following mixins are from http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// Positioning mixins
+// http://codepen.io/piouPiouM/pen/bLmkz
+// In response to the following article:
+// http://hugogiraudel.com/2013/08/05/offsets-sass-mixin/
+
+// variables were moved to _variables.scss file
+
+// @private
+@mixin _position($type,
+                 $top: $position-default-top,
+                 $right: $position-default-right,
+                 $bottom: $position-default-bottom,
+                 $left: $position-default-left) {
+  $allowed_types: 'absolute' 'relative' 'fixed';
+
+  @if not index($allowed_types, $type) {
+    @warn "Unknow position: #{$type}.";
+  }
+
+  position: $type;
+  @each $data in top $top, right $right, bottom $bottom, left $left {
+    // Because of null value to default, if a position argument (eg `$top`) is not set,
+    // Sass does not output the property.
+    // Thus, values like 12px, 23em, -4rem, inherit or initial are accepted.
+    #{nth($data, 1)}: nth($data, 2);
+  }
+}
+
+@mixin absolute($top: $position-default-top, $right: $position-default-right,
+                $bottom: $position-default-bottom, $left: $position-default-left) {
+  @include _position(absolute, $top, $right, $bottom, $left);
+}
+
+@mixin relative($top: $position-default-top, $right: $position-default-right,
+                $bottom: $position-default-bottom, $left: $position-default-left) {
+  @include _position(relative, $top, $right, $bottom, $left);
+}
+
+@mixin fixed($top: $position-default-top, $right: $position-default-right,
+                $bottom: $position-default-bottom, $left: $position-default-left) {
+  @include _position(fixed, $top, $right, $bottom, $left);
+}
+

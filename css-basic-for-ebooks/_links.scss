@@ -1,0 +1,10 @@
+/*
+  Link Formatting
+*/
+a {
+  color: $red;
+
+  [href]:hover {
+    background: #ffa;
+  }
+}

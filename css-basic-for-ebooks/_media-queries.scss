@@ -1,0 +1,20 @@
+/*
+	Media queries support
+	
+	We define the following media queries based on width for the website and use media queries to fix some glaring issues 
+	in the default stylesheets. 
+	
+	* Larger than 1024 (large desktop screens)
+	* Between 768 and 1024 -- Larger than 768 and smaller than 1023 (this should be an ipad in landscape mode)
+	* between 600 and 768 -- larger than 600 and smaller than  767 (this should be an ipad in portrait mode)
+	* between 480 and 600 -- Larger than 480 and smaller than 599 (iPhone in landscape mode)
+	* smaller than 480 -- (iPhone in portrait mode) 
+	
+	Add this to the head of each document to make sure devices honor media queries. 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	The following sample of a mediaquery works around browsers that don't support them. 
+	
+	@media="only screen and (min-width: 401px) and (max-width: 600px)"
+*/

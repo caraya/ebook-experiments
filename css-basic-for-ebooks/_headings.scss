@@ -1,0 +1,36 @@
+/*
+  Headings
+*/
+// We're using a different font for headings. Declare it here to keep all heading declarations in one place
+.fontface body {
+  @include declare-font('Lato Regular', 'fonts/Lato-Reg', normal, normal);
+}
+
+h1, h2, h3, h4, h5, h6,
+{
+  @include declare-font('Lato Bold', 'fonts/Lato-Bol', 700, normal);
+}
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  margin-left: -60px;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
