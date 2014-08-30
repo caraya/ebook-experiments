@@ -1,0 +1,84 @@
+/*
+	Formating for different types of marginalia content
+*/
+
+aside {
+	width: 100%;
+	padding-bottom: .5em;
+	padding-top: .5em;
+	border-top: 3px double #ddd;
+	border-bottom: 3px double #ddd;
+	color: #666;
+	line-height: 1.4em;
+	font-size: 1.8em;
+}
+
+aside.pull {
+		margin-left: -20%;
+		margin-top: .2em;
+		margin-bottom: .5em;
+	}
+blockquote {
+  margin-left: 1em;
+  margin-bottom: 1em;
+  font-style: italic;
+
+	.opening {
+		font-size: 2em;
+		text-align: center;
+		border-top: 3px double #ddd;
+		padding-top: 2em;
+		border-bottom: 3px double #ddd;
+		padding-bottom: 2em;
+		margin-bottom: 10em;
+		}
+}
+
+.margin-notes,
+.content-left {
+  width: 230px;
+  margin-left: -230px;
+  margin-right: 20px;
+  text-align: right;
+  font-size: .75em;
+}
+
+.margin-notes-right,
+.content-right {
+  width: 230px;
+  margin-left: 760px;
+  margin-right: -20px;
+  text-align: left;
+  font-size: .75em;
+  position: absolute;
+}
+
+.content-right {
+  width: 230px;
+  margin-left: 760px;
+  margin-right: -20px;
+  text-align: left;
+  font-size: .75em;
+  position: absolute;
+}
+
+.content-right ul,
+.content-left ul {
+  list-style: none;
+}
+
+/*
+  asides stuff
+*/
+aside.lowlight {
+  opacity: .3;
+}
+
+aside.lowlight:hover {
+  opacity: 1;
+}
+
+aside h3 {
+  text-align: center;
+  padding-left: 20px;
+}

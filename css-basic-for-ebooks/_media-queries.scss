@@ -1,20 +1,267 @@
-/*
-	Media queries support
-	
-	We define the following media queries based on width for the website and use media queries to fix some glaring issues 
-	in the default stylesheets. 
-	
-	* Larger than 1024 (large desktop screens)
-	* Between 768 and 1024 -- Larger than 768 and smaller than 1023 (this should be an ipad in landscape mode)
-	* between 600 and 768 -- larger than 600 and smaller than  767 (this should be an ipad in portrait mode)
-	* between 480 and 600 -- Larger than 480 and smaller than 599 (iPhone in landscape mode)
-	* smaller than 480 -- (iPhone in portrait mode) 
-	
-	Add this to the head of each document to make sure devices honor media queries. 
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	The following sample of a mediaquery works around browsers that don't support them. 
-	
-	@media="only screen and (min-width: 401px) and (max-width: 600px)"
-*/
+// Media queries mixins
+// See https://raw.githubusercontent.com/paranoida/sass-mediaqueries/master/_media-queries.scss
+// for the fully commented code
+// See http://paranoida.github.io/sass-mediaqueries/ for tutorial and instructions
+//
+// ---------------------------------------------------------------------------------------------------------------------
+// --- screen -------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+
+@mixin screen($resMin, $resMax) {
+  @media screen and (min-width: $resMin) and (max-width: $resMax) {
+    @content;
+  }
+}
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+@mixin min-screen($res) {
+  @media screen and (min-width: $res) {
+    @content;
+  }
+}
+
+@mixin screen-height($resMin, $resMax) {
+  @media screen and (min-height: $resMin) and (max-height: $resMax) {
+    @content;
+  }
+}
+
+@mixin max-screen-height($res) {
+  @media screen and (max-height: $res) {
+    @content;
+  }
+}
+
+@mixin min-screen-height($res) {
+  @media screen and (min-height: $res) {
+    @content;
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// --- hdpi ------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Based on bourbon hidpi-media-queries file
+//(https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_hidpi-media-query.scss)
+// HiDPI mixin. Default value set to 1.3 to target Google Nexus 7 (http://bjango.com/articles/min-device-pixel-ratio/)
+
+@mixin hdpi($ratio: 1.3) {
+  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-resolution: #{round($ratio*96)}dpi),
+  only screen and (min-resolution: #{$ratio}dppx)
+  {
+    @content;
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// --- iphone ----------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+
+@mixin iphone3($orientation: all)
+{
+  $deviceMinWidth: 320px;
+  $deviceMaxWidth: 480px;
+  $devicePixelRatio: 1;
+
+  @if $orientation == all
+  {
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+    and (-webkit-device-pixel-ratio: $devicePixelRatio)
+    {
+      @content;
+    }
+  }
+  @else
+  {
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+    and (-webkit-device-pixel-ratio: $devicePixelRatio) and (orientation:#{$orientation})
+    {
+      @content;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// --- iphone-retina ---------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+
+@mixin iphone4($orientation: all)
+{
+  $deviceMinWidth: 320px;
+  $deviceMaxWidth: 480px;
+  $devicePixelRatio: 2;
+  $deviceAspectRatio: '2/3';
+
+  @if $orientation == all
+  {
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+    and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio)
+    {
+      @content;
+    }
+  }
+  @else
+  {
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+    and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: 2/3) and (orientation:#{$orientation})
+    {
+      @content;
+    }
+  }
+}
+
+/* iphone-5 */
+
+@mixin iphone5($orientation: all)
+{
+  $deviceMinWidth: 320px;
+  $deviceMaxWidth: 568px;
+  $devicePixelRatio: 2;
+  $deviceAspectRatio: '40/71';
+
+  @if $orientation == all
+  {
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+    and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio)
+    {
+      @content;
+    }
+  }
+  @else
+  {
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+    and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio) and (orientation:#{$orientation})
+    {
+      @content;
+    }
+  }
+}
+
+/* non-retina ipads (1, 2 and 3) */
+
+@mixin ipad($orientation: all) {
+  $deviceMinWidth: 768px;
+  $deviceMaxWidth: 1024px;
+
+  @if ($orientation == all) {
+    @media only screen and (min-device-width: $deviceMinWidth)
+                    and (max-device-width: $deviceMaxWidth) {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and (min-device-width: $deviceMinWidth)
+    and (max-device-width: $deviceMaxWidth)
+    and (orientation:#{$orientation})
+    {
+      @content;
+    }
+  }
+}
+
+/* ipad-retina */
+@mixin ipad-retina($orientation: all) {
+  $deviceMinWidth: 768px;
+  $deviceMaxWidth: 1024px;
+  $devicePixelRatio: 2;
+
+  @if ($orientation == all)   {
+    @media only screen and (min-device-width: $deviceMinWidth)
+                    and (max-device-width: $deviceMaxWidth)
+                    and (-webkit-device-pixel-ratio: $devicePixelRatio) {
+      @content;
+    }
+  }
+  @else   {
+    @media only screen and (min-device-width: $deviceMinWidth)
+                    and (max-device-width: $deviceMaxWidth)
+                    and (-webkit-device-pixel-ratio: $devicePixelRatio)
+                    and (orientation:#{$orientation}) {
+      @content;
+    }
+  }
+}
+
+// QUERIES BELOW HAVE NOT BEEN TESTED
+// USE AT YOUR OWN RISK
+/* Kindle fire*/
+@mixin kindle-fire($orientation: all){
+//Model                                 resoultion      PPCM (PPI)  Pixel Ratio
+//Kindle Fire                        1024x600        67 (170)            1.0      (notHDPI)
+  $deviceMinWidth: 600px;
+  $deviceMaxWidth: 1024px;
+
+  @if ($orientation == all) {
+    @media only screen and (min-device-width: $deviceMinWidth)
+                    and (max-device-width: $deviceMaxWidth) {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and (min-device-width: $deviceMinWidth)
+    and (max-device-width: $deviceMaxWidth)
+    and (orientation:#{$orientation})
+    {
+      @content;
+    }
+  }
+}
+
+@mixin kindlef-fire7in($orientation:all){
+// Model                                 resoultion      PPCM (PPI)  Pixel Ratio
+//Kindle Fire HD 7"            1280x800        85 (216)           1.5       hdpi
+//Kindle Fire HDX 7"         1920x1200   127 (323)           1.5        xhdpi
+  $deviceMinWidth: 800px;
+  $deviceMaxWidth: 1200px;
+  $devicePixelRatio: 1.5;
+
+  @if ($orientation == all)   {
+    @media only screen and (min-device-width: $deviceMinWidth)
+                    and (max-device-width: $deviceMaxWidth)
+                    and (-webkit-device-pixel-ratio: $devicePixelRatio) {
+      @content;
+    }
+  }
+  @else   {
+    @media only screen and (min-device-width: $deviceMinWidth)
+                    and (max-device-width: $deviceMaxWidth)
+                    and (-webkit-device-pixel-ratio: $devicePixelRatio)
+                    and (orientation:#{$orientation}) {
+      @content;
+    }
+  }
+}
+
+@mixin kindle-fire89in($orientation:all) {
+//Model                                 resoultion      PPCM (PPI)  Pixel Ratio
+//Kindle Fire HD 8.9"         1920x1200   100 (254)           1.5       hdpi
+//Kindle Fire HDX 8.9"      2560x1600   133 (339)           1.5        xhdpi
+  $deviceMinWidth: 1200px;
+  $deviceMaxWidth: 1600px;
+  $devicePixelRatio: 1.5;
+
+  @if ($orientation == all)   {
+    @media only screen and (min-device-width: $deviceMinWidth)
+                    and (max-device-width: $deviceMaxWidth)
+                    and (-webkit-device-pixel-ratio: $devicePixelRatio) {
+      @content;
+    }
+  }
+  @else   {
+    @media only screen and (min-device-width: $deviceMinWidth)
+                    and (max-device-width: $deviceMaxWidth)
+                    and (-webkit-device-pixel-ratio: $devicePixelRatio)
+                    and (orientation:#{$orientation}) {
+      @content;
+    }
+  }
+}

@@ -3,8 +3,8 @@
 @import "modular-scale/tests";
 
 // For modular scales
-//$ms-base   : 16px !default;
-$ms-base: 1em !default;
+$ms-base   : 16px !default;
+//$ms-base: 1em !default;
 $ms-ratio: $golden !default;
 
 @import "modular-scale/pow";

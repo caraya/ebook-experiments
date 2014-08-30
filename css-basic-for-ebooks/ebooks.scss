@@ -1,0 +1,77 @@
+/*
+ * eBook sample stylesheet
+ *
+ * */
+
+// ebook variables
+// Is this an epub book?
+$epub: true;
+//Is this a kindle book?
+$kindle: false;
+
+@import "_variables";
+@import "_mixins";
+
+@import "_normalize";
+
+
+
+@import "_modular-scale.scss";
+
+@font-face { /* Default font... SourceSans Pro in this case*/
+  @include declare-font('SourceSans Light',  'type/SourceSansPro-Light', 'normal', 'normal')
+}
+
+@font-face {
+  @include declare-font('SourceSans LightIt',  'type/SourceSansPro-LightIt', 'italic', 'normal')
+}
+
+@font-face {
+  @include declare-font('SourceSans SemiBold',  'type/SourceSansPro-Semibold', 'normal', 'bold')
+}
+
+@font-face {
+  @include declare-font('SourceSans SemiBoldIt',  'type/SourceSansPro-SemiboldIt', 'italic', 'bold')
+}
+
+/*
+ * Global style definitions
+ *
+ * Styles applied to the HTML element are used throughout the document unless
+ * a more specific style overrides it later
+ */
+
+html {
+  font-family: 'SourceSans Light';
+  font-size: 16px; /* we set up default font size in pixels so we can apply sizing scales */
+  line-height: 1.5;
+}
+
+@import "_generic";
+
+/*
+ * These are the basic elements of a page. I recomend keeping these
+ *
+*/
+@import "_links";
+@import "_headings";
+@import "_paragraphs";
+@import "_lists";
+
+/*
+ * All the imports below are optional. You may choose to implement them or not
+ * */
+@import "_multimedia";
+@import "_columns";
+@import "_marginalia";
+@import "_toc";
+@import "_images";
+@import "_footnotes";
+@import "_asides";
+
+
+/*
+ * We place media queries last as they may change the page display
+ * They are optional
+*/
+@import "_media-queries";

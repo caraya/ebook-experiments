@@ -1,0 +1,69 @@
+/*  Photo blocks
+-------------------------------------- */
+.photo-block {
+  width: 1020px;
+  float: left;
+  /* Test for extra width */
+  margin-left: -150px;
+  margin-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  /* @include declare-font("Source Sans Pro", source-sans-pro);  // Do we need this or do we just need to play with font size?
+  font-size: 0.8em;
+  font-weight: 200;
+  text-align: center;
+
+	h4 a {
+	  color: #888;
+	  text-transform: uppercase;
+	  font-size: .8em;
+	  letter-spacing: 1px;
+	  margin-bottom: 5px;
+	  float: left;
+	  width: 100%;
+	}
+	.single_photo {
+	  float: left;
+	  width: 1020px;
+	}
+	.single_photo_center {
+	  width: 35%;
+	  float: none;
+	  margin: 0 auto;
+	}
+	.double_photo {
+	  float: left;
+	  width: 505px;
+	}
+	figure.double_photo.left {
+	  margin-right: 3px;
+	}
+	figure.double_photo.right {
+	  margin-left: 3px;
+	}
+	p a {
+	  background-color: #333;
+	  padding: 3px 5px;
+	  -webkit-border-radius: 7px;
+	  -moz-border-radius: 7px;
+	  border-radius: 7px;
+	  border: 1px solid #555555;
+	}
+	p a:hover {
+	  background-color: #666;
+	  border: 1px solid #999;
+	  color: #fff;
+	}
+	figure {
+	  float: left;
+/*
+	  		border: 1px solid #333;
+	  		border-color: #cc092f;
+	  		border-width: thin;
+	  		border-style: solid;
+*/
+			}
+	a figure img:hover {
+	  border: 1px solid $red;
+	}

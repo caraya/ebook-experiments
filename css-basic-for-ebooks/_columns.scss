@@ -5,6 +5,23 @@ If we want to add additional classes to our columns, like the listed class under
 we just nest it as we would normally do with SASS
 */
 
+@mixin column-attribs ($cols, $gap, $fill: balance, $span: all){
+  // How many columns-moz-column-count: $cols;
+  -webkit-column-count: $cols;
+  column-count: $cols;
+  // Space between columns
+  -moz-column-gap: $gap;
+  -webkit-column-gap: $gap;
+  column-gap: $gap;
+  //  Properties below have uncertain support
+  -moz-column-fill: $fill;
+  -webkit-column-fill: $fill;
+  column-fill: $fill;
+  // Column span
+  -moz-column-span: $span;
+  -webkit-column-span: $span;
+  column-span: $span;
+
 .columns2 {
   width: 100%;
 	@include column-attribs (2, 20px);
