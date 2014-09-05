@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Flexbox Test</title>
+<style>
+.wrapper {
+    display: -webkit-flex;
+    display: flex;
+    /* size and other dimensions */
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width: 1024px;
+    height: 768px;
+    background-color: Silver;
+}
+
+.flex-row {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+#row1 {
+  background-color: purple
+}
+
+.flex-item {
+    background-color: DeepSkyBlue;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class='flex-row' id='row1'>
+    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 2</div>
+  </div>
+  <div class='flex-row' id='row2'>
+    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 2</div>
+  </div>
+  <div class='flex-row' id='row3'>
+    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 2</div>
+  </div>
+  <div class='flex-row' id='row4'>
+    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 2</div>
+  </div>
+</div>
+</body>
+</html>

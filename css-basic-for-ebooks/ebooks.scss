@@ -14,23 +14,23 @@ $kindle: false;
 
 @import "_normalize";
 
-
-
 @import "_modular-scale.scss";
+
+@import "_fonts";
 
 @font-face { /* Default font... SourceSans Pro in this case*/
   @include declare-font('SourceSans Light',  'type/SourceSansPro-Light', 'normal', 'normal')
 }
 
-@font-face {
+@font-face { /* Italic font */
   @include declare-font('SourceSans LightIt',  'type/SourceSansPro-LightIt', 'italic', 'normal')
 }
 
-@font-face {
+@font-face { /* bold/semibold font*/
   @include declare-font('SourceSans SemiBold',  'type/SourceSansPro-Semibold', 'normal', 'bold')
 }
 
-@font-face {
+@font-face { /* bold/semibold  italic font*/
   @include declare-font('SourceSans SemiBoldIt',  'type/SourceSansPro-SemiboldIt', 'italic', 'bold')
 }
 
@@ -47,7 +47,32 @@ html {
   line-height: 1.5;
 }
 
-@import "_generic";
+/*
+ * Generic styles
+ *
+ * Styles using our fonts and other elements. We don't want faux italic and bold
+ * so we go through the xtra pain to add additional fonts.
+ *
+ * Had originally moved to its own partial but since they depend on the fonts we've selected
+ * I decided to leave it here
+ */
+
+em {
+  font-family: 'SourceSans LightIt';
+}
+
+strong {
+  font-family: 'SourceSans SemiBold';
+}
+
+em strong,
+strong em { /* order of em and strong doesn't matter*/
+  font-family: 'SourceSans SemiBoldIt';
+}
+
+pre {
+  font-family: 'SourceSans Light'
+}
 
 /*
  * These are the basic elements of a page. I recomend keeping these
@@ -57,6 +82,7 @@ html {
 @import "_headings";
 @import "_paragraphs";
 @import "_lists";
+@import "_position";
 
 /*
  * All the imports below are optional. You may choose to implement them or not

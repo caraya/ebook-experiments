@@ -1,68 +1,9 @@
-// We use a single file to declare all our Mixins to make sure we know where to
-// find them rather than have to search all files
-
-// Font declaration for standard web
-@mixin font-declaration($font-family,  $font-file-name, $weight:normal, $style:normal) {
-  font-family: '#{$font-family}';
-  src:
-    local('#{$font-file-name}.ttf') format('truetype'),
-    url('#{$font-file-name}.ttf') format('truetype'),
-    url('#{$font-file-name}.woff') format('woff');
-  font-weight: $weight;
-  font-style: $style;
-
-}
-
-// Font declaration for ebook-related fonts for which we only need the local truetype font
-@mixin ebook-font-declaration($font-family,  $font-file-name, $weight:normal, $style:normal) {
-  font-family: '#{$font-family}';
-  src:
-    local('#{$font-file-name}.ttf') format('truetype');
-  font-weight: $weight;
-  font-style: $style;
-
-}
-
-// This mixin uses the two font declrations above + the is_ebook variable
-// declared in _varaiables.scss to add the right font declaration
-
-@mixin declare-font($font-family,  $font-file-name, $weight:normal, $style:normal) {
-  @debug "$is_ebook evaluates to #{$is_ebook}";
-  @if  ($is_ebook) {
-    @include ebook-font-declaration($font-family,  $font-file-name, $weight:normal, $style:normal);
-
-  }
-  @else {
-    @include font-declaration($font-family,  $font-file-name, $weight:normal, $style:normal);
-  }
-}
 
 @mixin solid-thin() {
   border-width: thin;
   border-style: solid;
 }
 
-// This mixin will create column attributes for the element it's called in
-// It uses variables to make life easier. Rather than code multiple attribute
-// sets we use a single set that takes 2 attributes.
-//
-// $cols indicates the number of columns to use
-// $gap indicates the gap between the columns (as in 20px)
-// $fill indicate
-
-@mixin column-attribs ($cols, $gap, $fill: balance, $span: all){
-  -moz-column-count: $cols;
-  -moz-column-gap: $gap;
-  -webkit-column-count: $cols;
-  -webkit-column-gap: $gap;
-  column-count: $cols;
-  column-gap: $gap;
-  /* Properties below have uncertain support */
-  -moz-column-fill: $fill;
-  column-fill: $fill;
-  webkit-column-span: $span;
-  column-span: $span;
-}
 
 // The following mixins are from http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
 

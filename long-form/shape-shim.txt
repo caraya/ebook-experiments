@@ -1,0 +1,22 @@
+.shape-shim{
+  height: 100%;
+  width: 50%;
+}
+
+.shape-shim--left{
+  float: left;
+  @extend .shape-shim;
+  $shape: polygon(0px 0px, 714px 0px, 705px 200px, 653px 262px, 651px 345px, 722px 381px, 693px 411px, 690px 455px, 776px 476px, 751px 516px, 751px 556px, 851px 559px, 846px 611px, 721px 650px, 710px 694px, 753px 728px, 782px 790px, 800px 839px, 761px 898px, 657px 923px, 625px 1024px, 598px 1199px, 0px 1200px);
+
+  shape-outside: $shape;
+  -webkit-shape-outside: $shape;
+}
+
+.shape-shim--right{
+  float: right;
+  @extend .shape-shim;
+  $shape: polygon(94px 1007px, 82px 886px, -2px 840px, -2px 794px, 12px 756px, 15px 685px, 58px 618px, 139px 600px, 154px 532px, 89px 472px, 95px 414px, 143px 374px, 219px 285px, 146px 177px, 212px 1px, 960px 0px, 960px 1200px, 59px 1199px);
+
+  shape-outside: $shape;
+  -webkit-shape-outside: $shape;
+}
