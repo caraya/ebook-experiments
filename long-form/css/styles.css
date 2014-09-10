@@ -1,4 +1,28 @@
 /**
+ * CSS REGIONS EXPERIMENTAL STYLESHEET
+ * 
+ * TODO: STILL NEED TO FIGURE OUT A WAY TO DISPLAY THE CONTENT FOR BROWSERS THAT DO 
+ * NOT SUPPORT REGIONS (FIREFOX AND OPERA) OR THAT DON'T SUPPORT REGIONS FULLY (IE) 
+ * THAT IS NOT AS DISRUPTIVE AS WHAT WE WERE DOING BEFORE
+ *
+ * The code is currentl using the Adobe pollyfill to work across browers. I wouldn't 
+ * recommend this for production code but there is a chance that, if it works in Safari 
+ * mobile, that it will also work on Chrome for iOS and iBooks.
+ *
+ * NOTE THAT THE POLYFILL REQUIRES AN ACTIVE SERVER TO WORK AS IT USES XHR TO 
+ * RETRIEVE CONTENT. DURING DEVELOPMENT YOU CAN PUT STUFF ON YOU APACHE / MAMP / WAMP 
+ * SERVER OR RUN PYTHON SIMPLE SERVER FOLLOWING THESE STEPS (FOR PYTHON 2.7):
+ *
+ * GO TO THE DIRECTORY WHERE YOUR FILES ARE LOCATED
+ * RUN THE FOLLOWING COMMAND: python -m SimpleHTTPServer 8080
+ * POINT YOUR BROWSER TO http://localhost:8080/
+ *
+ * @author Carlos Araya
+ * @see http://dev.w3.org/csswg/css-regions/
+ * @see http://html.adobe.com/webplatform/layout/regions/
+ * @see https://github.com/betravis/css-regions-polyfill/
+ */
+/**
  * Web Font definition.
  *
  * We define 4 different fonts in the same family to avoid using faux bold and
@@ -69,7 +93,7 @@
 html {
   font-family: 'SourceSans Light';
   font-size: 16px;
-  line-height: 1.25;
+  line-height: 1.2;
   padding-left: 2em;
 }
 
@@ -125,7 +149,7 @@ a[href^="http"] { /*  External links get underlined */
 */
 
 /** FEATURE QUERIES WILL BE HERE WHEN I PUT THEM BACK */
-@supports not (  flow-into: region; ) {
+@supports not (( flow-into: region; ) or (-webkit-flow-into: region) or (-ms-flow-into: region)) {
   .content {
     visibility: none;
   }
@@ -149,7 +173,7 @@ a[href^="http"] { /*  External links get underlined */
 .region {
   flow-from: region;
   -webkit-flow-from: region;
-  -ms-flow-into: region;
+  -ms-flow-from: region;
   position:relative;
   width: 55%;
   height:300px;
@@ -192,8 +216,8 @@ a[href^="http"] { /*  External links get underlined */
 */
 #region05,
 #region06{
-  margin-top: 5em;
-  margin-bottom: 5em;
+  margin-top: 3em;
+  margin-bottom: 3em;
   /* border: 3px solid #000; */
   width: 45%;
 }

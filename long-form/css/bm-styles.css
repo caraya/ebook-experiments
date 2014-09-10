@@ -1,0 +1,398 @@
+/**
+ * CSS REGIONS EXPERIMENTAL STYLESHEET
+ * 
+ * TODO: STILL NEED TO FIGURE OUT A WAY TO DISPLAY THE CONTENT FOR BROWSERS 
+ * THAT DO NOT SUPPORT REGIONS (FIREFOX AND OPERA) OR THAT DON'T SUPPORT
+ * REGIONS FULLY (IE) THAT IS NOT AS DISRUPTIVE AS WHAT WE WERE DOING BEFORE
+ *
+ * The code is currentl using the Adobe pollyfill to work across browers. I wouldn't 
+ * recommend this for production code but there is a chance that, if it works in Safari 
+ * mobile, that it will also work on Chrome for iOS and iBooks.
+ *
+ * NOTE THAT THE POLYFILL REQUIRES AN ACTIVE SERVER TO WORK AS IT USES XHR TO 
+ * RETRIEVE CONTENT. DURING DEVELOPMENT YOU CAN PUT STUFF ON YOU LOCAL 
+ * DEV MACHINE SERVER 
+ * 
+ * OR RUN PYTHON SIMPLE SERVER FOLLOWING THESE STEPS (FOR PYTHON 2.7):
+ *
+ * GO TO THE DIRECTORY WHERE YOUR FILES ARE LOCATED
+ * RUN THE FOLLOWING COMMAND: python -m SimpleHTTPServer 8080
+ * POINT YOUR BROWSER TO http://localhost:8080/
+ *
+ * @author Carlos Araya
+ * @see http://dev.w3.org/csswg/css-regions/
+ * @see http://html.adobe.com/webplatform/layout/regions/
+ * @see https://github.com/betravis/css-regions-polyfill/
+ */
+/**
+ * Web Font definition.
+ *
+ * We define 4 different fonts in the same family to avoid using faux bold and
+ * italics.
+ *
+ * Font selected is SourceSans Pro from Adobe (Open Source License) and the
+ * weight selected are:
+ *
+ * Light
+ * Light Italic
+ * Semibold
+ * Semibold italic
+ *
+ * Because this is not a technical book I'm not including a monospace font for
+ * code examples.
+ *
+ * Fonts have been subset using Font Squirrel's WebFont Generator
+ */
+
+@font-face {
+    font-family: 'SourceSans Light';
+    src: url('type/sourcesanspro-light.eot');
+    src: url('type/sourcesanspro-light.eot?#iefix') format('embedded-opentype'),
+         url('type/sourcesanspro-light.woff') format('woff'),
+         url('type/sourcesanspro-light.ttf') format('truetype'),
+         url('type/sourcesanspro-light.svg#source_sans_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSans LightIt';
+    src: url('type/sourcesanspro-lightit.eot');
+    src: url('type/sourcesanspro-lightit.eot?#iefix') format('embedded-opentype'),
+         url('type/sourcesanspro-lightit.woff') format('woff'),
+         url('type/sourcesanspro-lightit.ttf') format('truetype'),
+         url('type/sourcesanspro-lightit.svg#source_sans_prolight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSans SemiBold';
+    src: url('type/sourcesanspro-semibold.eot');
+    src: url('type/sourcesanspro-semibold.eot?#iefix') format('embedded-opentype'),
+         url('type/sourcesanspro-semibold.woff') format('woff'),
+         url('type/sourcesanspro-semibold.ttf') format('truetype'),
+         url('type/sourcesanspro-semibold.svg#source_sans_prosemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSans SemiBoldIt';
+    src: url('type/sourcesanspro-semiboldit.eot');
+    src: url('type/sourcesanspro-semiboldit.eot?#iefix') format('embedded-opentype'),
+         url('type/sourcesanspro-semiboldit.woff') format('woff'),
+         url('type/sourcesanspro-semiboldit.ttf') format('truetype'),
+         url('type/sourcesanspro-semiboldit.svg#source_sans_proSBdIt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
+ * Defining basic elements and fonts associations
+*/
+
+html {
+  font-family: 'SourceSans Light';
+  font-size: 16px;
+  line-height: 1.2;
+  padding-left: 2em;
+}
+
+em {
+  font-family: 'SourceSans LightIt';
+}
+
+strong {
+  font-family: 'SourceSans SemiBold';
+}
+
+em strong,
+strong em { /* order of em and strong doesn't matter for styling*/
+  font-family: 'SourceSans SemiBoldIt';
+}
+
+pre {
+  font-family: 'SourceSans Light'
+}
+/*
+ *
+ * Links and anchor experiments
+ * External Links are underlined
+ * Internal links are not underlined
+*/
+a { /* Local links don't get underlined */
+  text-decoration: none;
+}
+
+a[href^="http"] { /*  External links get underlined */
+  text-decoration: underline;
+}
+
+.picture{
+  width: 100%;
+  max-width: 100%;
+  height: 25%;
+  max-height: 25%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/**
+ * CONTENT FLOWS
+ * 
+ * Since we are using mulitple content flows we have to define flow-into and
+ *  flow-from for each of the flows we have designed. This will definitely be
+ * a PITA but I think  it'll be worth it in the end. 
+ */
+
+
+/**
+ * OVERVIEW FLOW
+ * 
+ * Defines the source of the content that will flow into the overview region of the
+ * document
+*/
+.burningman-overview  {
+  flow-into: content-overview-region;
+  -webkit-flow-into: content-overview-region;
+  -ms-flow-into: content-overview-region;
+}
+
+.content-overview-region {
+  flow-from: content-overview-region;
+  -webkit-flow-from: content-overview-region;
+  -ms-flow-into: content-overview-region;
+}
+
+/**
+ * STYLE FOR THE OVERVIEW REGION
+ */
+.content-overview-region {
+  position: relative;
+  width: 90%;
+  height:auto;
+  margin: 0 auto;
+  padding: 2em;
+  border: 1px solid purple;
+}
+
+/**
+ * HISTORY FLOW
+ */
+.burningman-history  {
+  flow-into: history-region;
+  -webkit-flow-into: history-region;
+  -ms-flow-into: history-region;
+}
+
+.history-region {
+  flow-from: history-region;
+  -webkit-flow-from: history-region;
+  -ms-flow-into: history-region;
+}
+.history-region {
+  position: relative;
+  width: 69%;
+  height:200px;
+  border: 1px solid #f00;
+  padding: 1em;
+  float: left;
+  height: auto;
+}
+
+/**
+ * TRANSITION FLOW
+ */
+.burningman-transition  {
+  flow-into: transition-region;
+  -webkit-flow-into: transition-region;
+  -ms-flow-into: transition-region;
+}
+
+.transition-region {
+  flow-from: transition-region;
+  -webkit-flow-from: transition-region;
+  -ms-flow-into: transition-region;
+}
+
+.transition-region {
+  position: absolute;
+  left: 73%;
+  height: auto;
+  width: 24%;
+  border: 1px solid #f0f;
+  padding: 0.5em;
+  float: right;
+}
+
+/**
+ * TIMELINE FLOW
+ */
+.burningman-timeline {
+  flow-into: timeline-region;
+  -webkit-flow-into: timeline-region;
+  -ms-flow-into: timeline-region;
+}
+
+.timeline-region {
+  flow-from: timeline-region;
+  -webkit-flow-from: timeline-region;
+  -ms-flow-into: timeline-region;
+}
+
+/**
+ * TIMELINE REGION STYLES
+ */
+.timeline-region {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #80f;
+}
+
+tr th,
+tr td {
+  border: 1px thin #0ff;
+}
+
+tr th:first-child,
+tr td:first-child {
+  width: 5%;
+  text-align: center;
+}
+
+tr th:nth-child(2),
+tr td:nth-child(2){
+  width: 10%;
+  text-align: center;
+}
+
+tr th:nth-child(3),
+tr td:nth-child(3){
+  width: 10%;
+  text-align: center;
+}
+
+tr th:nth-child(4),
+tr td:nth-child(4){
+  width: 10%;
+  text-align: center;
+}
+
+tr th:nth-child(5),
+tr td:nth-child(5){
+  width: 10%;
+  text-align: center;
+}
+
+tr th:nth-child(6),
+tr td:nth-child(6){
+  width: 10%;
+  text-align: center;
+}
+
+tr th:last-child,
+tr td:last-child {
+  width: 40%;
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+
+
+
+.burningman-principles-full{
+  flow-into: principles-region;
+  -webkit-flow-into: principles-region;
+  -ms-flow-into: principles-region;
+}
+
+.principles-region {
+  flow-from: principles-region;
+  -webkit-flow-from: principles-region;
+  -ms-flow-into: principles-region;
+}
+
+.principles-region {
+  position: relative;
+  height: auto;
+  border: 1px solid #3e3;
+
+}
+
+
+.burningman-principles {
+  position: relative;
+}
+
+.principle {
+  display: inline-block;
+  width: 30%;
+  height: auto;
+  float: none;
+  border: 1px solid #000;
+  padding: 0.5rem 0.5rem;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.principle:nth-child(4),
+.principle:nth-child(6) {
+  margin-bottom: 1rem;
+}
+
+
+.burningman-art {
+  flow-into: art-region;
+  -webkit-flow-into: art-region;
+  -ms-flow-into: art-region;
+}
+
+.burningman-vehicles {
+  flow-into: art-region;
+  -webkit-flow-into: art-region;
+  -ms-flow-into: art-region;
+}
+
+.art-region {
+  flow-from: art-region;
+  -webkit-flow-from: art-region;
+  -ms-flow-from: art-region;
+}
+
+.art-region {
+  width: 40%;
+  height: auto;
+}
+
+figure img {
+  width: 40%;
+  height: 40%
+    
+}
+
+figure figcaption {
+  font-size: 75%;
+}
+<!-- 
+  We keep these two divs outside the flow so we can use the 
+  crossreference links 
+-->
+.burningman-references {
+              -webkit-column-count: 2;
+                 -moz-column-count: 2;
+                      column-count: 2;
+             -webkit-column-gap: 20px;
+                -moz-column-gap: 20px;
+                     column-gap: 20px;
+}
+
+.burningman-references, .burningman-further-read {
+              -webkit-column-count: 2;
+                 -moz-column-count: 2;
+                      column-count: 2;
+             -webkit-column-gap: 20px;
+                -moz-column-gap: 20px;
+                     column-gap: 20px;
+}

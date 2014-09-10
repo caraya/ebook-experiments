@@ -1,0 +1,24 @@
+// Font Related Stuff
+
+// Font declaration for standard web
+@mixin font-declaration($font-family,  $font-file-name, $weight:normal, $style:normal) {
+  font-family: '#{$font-family}';
+  src:
+    local('#{$font-file-name}.ttf') format('truetype'),
+    url('#{$font-file-name}.ttf') format('truetype'),
+    url('#{$font-file-name}.woff') format('woff');
+  font-weight: $weight;
+  font-style: $style;
+
+}
+
+// Font declaration for ebook-related fonts for which we only need the local truetype font
+@mixin ebook-font-declaration($font-family,  $font-file-name, $weight:normal, $style:normal) {
+  font-family: '#{$font-family}';
+  src:
+    local('#{$font-file-name}.ttf') format('truetype');
+  font-weight: $weight;
+  font-style: $style;
+
+}
+

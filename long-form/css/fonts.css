@@ -1,0 +1,63 @@
+/**
+ * Web Font definition.
+ *
+ * We define 4 different fonts in the same family to avoid using faux bold and
+ * italics.
+ *
+ * Font selected is SourceSans Pro from Adobe (Open Source License) and the
+ * weight selected are:
+ *
+ * Light
+ * Light Italic
+ * Semibold
+ * Semibold italic
+ *
+ * Because this is not a technical book I'm not including a monospace font for
+ * code examples.
+ *
+ * Fonts have been subset using Font Squirrel's WebFont Generator
+ */
+
+@font-face {
+    font-family: 'SourceSans Light';
+    src: url('type/sourcesanspro-light.eot');
+    src: url('type/sourcesanspro-light.eot?#iefix') format('embedded-opentype'),
+         url('type/sourcesanspro-light.woff') format('woff'),
+         url('type/sourcesanspro-light.ttf') format('truetype'),
+         url('type/sourcesanspro-light.svg#source_sans_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSans LightIt';
+    src: url('type/sourcesanspro-lightit.eot');
+    src: url('type/sourcesanspro-lightit.eot?#iefix') format('embedded-opentype'),
+         url('type/sourcesanspro-lightit.woff') format('woff'),
+         url('type/sourcesanspro-lightit.ttf') format('truetype'),
+         url('type/sourcesanspro-lightit.svg#source_sans_prolight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSans SemiBold';
+    src: url('type/sourcesanspro-semibold.eot');
+    src: url('type/sourcesanspro-semibold.eot?#iefix') format('embedded-opentype'),
+         url('type/sourcesanspro-semibold.woff') format('woff'),
+         url('type/sourcesanspro-semibold.ttf') format('truetype'),
+         url('type/sourcesanspro-semibold.svg#source_sans_prosemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSans SemiBoldIt';
+    src: url('type/sourcesanspro-semiboldit.eot');
+    src: url('type/sourcesanspro-semiboldit.eot?#iefix') format('embedded-opentype'),
+         url('type/sourcesanspro-semiboldit.woff') format('woff'),
+         url('type/sourcesanspro-semiboldit.ttf') format('truetype'),
+         url('type/sourcesanspro-semiboldit.svg#source_sans_proSBdIt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

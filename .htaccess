@@ -1,0 +1,8 @@
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm
+
+AddType application/vnd.ms-fontobject .eot
+AddType application/x-font-truetype .ttf
+AddType application/font-woff .woff
+AddType application/x-font-opentype .otf

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="dtb:uid" content="http://www.hxa7241.org/articles/content/epup-guide_hxa7241_2007_1.epub" />
+  </head>
+  <docTitle>
+    <text>Fixed Layout EPUB Example</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="p1" playOrder="1">
+      <navLabel>
+        <text>Cover</text>
+      </navLabel>
+      <content src="cover.xhtml" />
+    </navPoint>
+    <navPoint id="p2" playOrder="2">
+      <navLabel>
+        <text>Chapter 1</text>
+      </navLabel>
+      <content src="ch01.xhtml" />
+    </navPoint>
+    <navPoint id="p3" playOrder="3">
+      <navLabel>
+        <text>Chapter 2</text>
+      </navLabel>
+      <content src="ch02.xhtml" />
+    </navPoint>
+        <navPoint id="p4" playOrder="4">
+      <navLabel>
+        <text>Chapter 3</text>
+      </navLabel>
+      <content src="ch03.xhtml" />
+    </navPoint>
+        <navPoint id="p5" playOrder="5">
+      <navLabel>
+        <text>Chapter 4</text>
+      </navLabel>
+      <content src="ch04.xhtml" />
+    </navPoint>
+    <navPoint id="p6" playOrder="6">
+      <navLabel>
+        <text>Chapter 5</text>
+      </navLabel>
+      <content src="ch05.xhtml" />
+    </navPoint>
+        <navPoint id="p7" playOrder="7">
+      <navLabel>
+        <text>Chapter 6</text>
+      </navLabel>
+      <content src="ch06.xhtml" />
+    </navPoint>
+    <navPoint id="p8" playOrder="8">
+      <navLabel>
+        <text>Chapter 7</text>
+      </navLabel>
+      <content src="ch07.xhtml" />
+    </navPoint>
+    <navPoint id="p9" playOrder="9">
+      <navLabel>
+        <text>Chapter 8</text>
+      </navLabel>
+      <content src="ch08.xhtml" />
+    </navPoint>
+    <navPoint id="p10" playOrder="10">
+      <navLabel>
+        <text>Chapter 9</text>
+      </navLabel>
+      <content src="ch09.xhtml" />
+    </navPoint>
+    <navPoint id="p11" playOrder="11">
+      <navLabel>
+        <text>Chapter 10</text>
+      </navLabel>
+      <content src="ch10.xhtml" />
+    </navPoint>
+        <navPoint id="p12" playOrder="12">
+      <navLabel>
+        <text>Chapter 11</text>
+      </navLabel>
+      <content src="ch11.xhtml" />
+    </navPoint>
+        <navPoint id="p13" playOrder="13">
+      <navLabel>
+        <text>Chapter 12</text>
+      </navLabel>
+      <content src="ch12.xhtml" />
+    </navPoint>
+        <navPoint id="p14" playOrder="14">
+      <navLabel>
+        <text>Chapter 13</text>
+      </navLabel>
+      <content src="ch13.xhtml" />
+    </navPoint>
+        <navPoint id="p15" playOrder="15">
+      <navLabel>
+        <text>Chapter 14</text>
+      </navLabel>
+      <content src="ch14.xhtml" />
+    </navPoint>
+        <navPoint id="p16" playOrder="16">
+      <navLabel>
+        <text>Chapter 15</text>
+      </navLabel>
+      <content src="ch15.xhtml" />
+    </navPoint>
+        <navPoint id="p17" playOrder="17">
+      <navLabel>
+        <text>Chapter 16</text>
+      </navLabel>
+      <content src="ch16.xhtml" />
+    </navPoint>
+        <navPoint id="p18" playOrder="18">
+      <navLabel>
+        <text>Chapter 17</text>
+      </navLabel>
+      <content src="ch17.xhtml" />
+    </navPoint>
+  </navMap>
+</ncx>
+
