@@ -362,10 +362,17 @@ tr td:last-child {
 }
 
 .art-region {
-  width: 40%;
+  width: 100%;
   height: auto;
 }
 
+.burningman-temple > li {
+  margin-bottom: 1em;
+}
+
+figure {
+  margin: 0 auto;
+}
 figure img {
   width: 40%;
   height: 40%
