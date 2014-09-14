@@ -1,0 +1,302 @@
+<smil xmlns="http://www.w3.org/ns/SMIL" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0">
+ <body>
+  <seq id="s000001" epub:textref="ulysses.txt">
+   <par id="p000001">
+    <text src="ulysses.txt#f000001"/>
+    <audio clipBegin="00:00:00.000" clipEnd="00:00:02.799" src="ulysses.mp3"/>
+   </par>
+   <par id="p000002">
+    <text src="ulysses.txt#f000002"/>
+    <audio clipBegin="00:00:02.799" clipEnd="00:00:02.799" src="ulysses.mp3"/>
+   </par>
+   <par id="p000003">
+    <text src="ulysses.txt#f000003"/>
+    <audio clipBegin="00:00:02.799" clipEnd="00:00:06.639" src="ulysses.mp3"/>
+   </par>
+   <par id="p000004">
+    <text src="ulysses.txt#f000004"/>
+    <audio clipBegin="00:00:06.639" clipEnd="00:00:10.199" src="ulysses.mp3"/>
+   </par>
+   <par id="p000005">
+    <text src="ulysses.txt#f000005"/>
+    <audio clipBegin="00:00:10.199" clipEnd="00:00:14.359" src="ulysses.mp3"/>
+   </par>
+   <par id="p000006">
+    <text src="ulysses.txt#f000006"/>
+    <audio clipBegin="00:00:14.359" clipEnd="00:00:17.679" src="ulysses.mp3"/>
+   </par>
+   <par id="p000007">
+    <text src="ulysses.txt#f000007"/>
+    <audio clipBegin="00:00:17.679" clipEnd="00:00:23.440" src="ulysses.mp3"/>
+   </par>
+   <par id="p000008">
+    <text src="ulysses.txt#f000008"/>
+    <audio clipBegin="00:00:23.440" clipEnd="00:00:26.679" src="ulysses.mp3"/>
+   </par>
+   <par id="p000009">
+    <text src="ulysses.txt#f000009"/>
+    <audio clipBegin="00:00:26.679" clipEnd="00:00:31.039" src="ulysses.mp3"/>
+   </par>
+   <par id="p000010">
+    <text src="ulysses.txt#f000010"/>
+    <audio clipBegin="00:00:31.039" clipEnd="00:00:34.560" src="ulysses.mp3"/>
+   </par>
+   <par id="p000011">
+    <text src="ulysses.txt#f000011"/>
+    <audio clipBegin="00:00:34.560" clipEnd="00:00:38.479" src="ulysses.mp3"/>
+   </par>
+   <par id="p000012">
+    <text src="ulysses.txt#f000012"/>
+    <audio clipBegin="00:00:38.479" clipEnd="00:00:41.280" src="ulysses.mp3"/>
+   </par>
+   <par id="p000013">
+    <text src="ulysses.txt#f000013"/>
+    <audio clipBegin="00:00:41.280" clipEnd="00:00:47.439" src="ulysses.mp3"/>
+   </par>
+   <par id="p000014">
+    <text src="ulysses.txt#f000014"/>
+    <audio clipBegin="00:00:47.439" clipEnd="00:00:50.159" src="ulysses.mp3"/>
+   </par>
+   <par id="p000015">
+    <text src="ulysses.txt#f000015"/>
+    <audio clipBegin="00:00:50.159" clipEnd="00:00:53.479" src="ulysses.mp3"/>
+   </par>
+   <par id="p000016">
+    <text src="ulysses.txt#f000016"/>
+    <audio clipBegin="00:00:53.479" clipEnd="00:00:57.320" src="ulysses.mp3"/>
+   </par>
+   <par id="p000017">
+    <text src="ulysses.txt#f000017"/>
+    <audio clipBegin="00:00:57.320" clipEnd="00:01:01.600" src="ulysses.mp3"/>
+   </par>
+   <par id="p000018">
+    <text src="ulysses.txt#f000018"/>
+    <audio clipBegin="00:01:01.600" clipEnd="00:01:04.599" src="ulysses.mp3"/>
+   </par>
+   <par id="p000019">
+    <text src="ulysses.txt#f000019"/>
+    <audio clipBegin="00:01:04.599" clipEnd="00:01:09.120" src="ulysses.mp3"/>
+   </par>
+   <par id="p000020">
+    <text src="ulysses.txt#f000020"/>
+    <audio clipBegin="00:01:09.120" clipEnd="00:01:13.760" src="ulysses.mp3"/>
+   </par>
+   <par id="p000021">
+    <text src="ulysses.txt#f000021"/>
+    <audio clipBegin="00:01:13.760" clipEnd="00:01:16.560" src="ulysses.mp3"/>
+   </par>
+   <par id="p000022">
+    <text src="ulysses.txt#f000022"/>
+    <audio clipBegin="00:01:16.560" clipEnd="00:01:19.599" src="ulysses.mp3"/>
+   </par>
+   <par id="p000023">
+    <text src="ulysses.txt#f000023"/>
+    <audio clipBegin="00:01:19.599" clipEnd="00:01:21.480" src="ulysses.mp3"/>
+   </par>
+   <par id="p000024">
+    <text src="ulysses.txt#f000024"/>
+    <audio clipBegin="00:01:21.480" clipEnd="00:01:25.959" src="ulysses.mp3"/>
+   </par>
+   <par id="p000025">
+    <text src="ulysses.txt#f000025"/>
+    <audio clipBegin="00:01:25.959" clipEnd="00:01:30.879" src="ulysses.mp3"/>
+   </par>
+   <par id="p000026">
+    <text src="ulysses.txt#f000026"/>
+    <audio clipBegin="00:01:30.879" clipEnd="00:01:35.879" src="ulysses.mp3"/>
+   </par>
+   <par id="p000027">
+    <text src="ulysses.txt#f000027"/>
+    <audio clipBegin="00:01:35.879" clipEnd="00:01:39.079" src="ulysses.mp3"/>
+   </par>
+   <par id="p000028">
+    <text src="ulysses.txt#f000028"/>
+    <audio clipBegin="00:01:39.079" clipEnd="00:01:42.040" src="ulysses.mp3"/>
+   </par>
+   <par id="p000029">
+    <text src="ulysses.txt#f000029"/>
+    <audio clipBegin="00:01:42.040" clipEnd="00:01:45.280" src="ulysses.mp3"/>
+   </par>
+   <par id="p000030">
+    <text src="ulysses.txt#f000030"/>
+    <audio clipBegin="00:01:45.280" clipEnd="00:01:48.239" src="ulysses.mp3"/>
+   </par>
+   <par id="p000031">
+    <text src="ulysses.txt#f000031"/>
+    <audio clipBegin="00:01:48.239" clipEnd="00:01:51.959" src="ulysses.mp3"/>
+   </par>
+   <par id="p000032">
+    <text src="ulysses.txt#f000032"/>
+    <audio clipBegin="00:01:51.959" clipEnd="00:01:54.799" src="ulysses.mp3"/>
+   </par>
+   <par id="p000033">
+    <text src="ulysses.txt#f000033"/>
+    <audio clipBegin="00:01:54.799" clipEnd="00:01:57.760" src="ulysses.mp3"/>
+   </par>
+   <par id="p000034">
+    <text src="ulysses.txt#f000034"/>
+    <audio clipBegin="00:01:57.760" clipEnd="00:02:03.120" src="ulysses.mp3"/>
+   </par>
+   <par id="p000035">
+    <text src="ulysses.txt#f000035"/>
+    <audio clipBegin="00:02:03.120" clipEnd="00:02:03.120" src="ulysses.mp3"/>
+   </par>
+   <par id="p000036">
+    <text src="ulysses.txt#f000036"/>
+    <audio clipBegin="00:02:03.120" clipEnd="00:02:06.159" src="ulysses.mp3"/>
+   </par>
+   <par id="p000037">
+    <text src="ulysses.txt#f000037"/>
+    <audio clipBegin="00:02:06.159" clipEnd="00:02:09.319" src="ulysses.mp3"/>
+   </par>
+   <par id="p000038">
+    <text src="ulysses.txt#f000038"/>
+    <audio clipBegin="00:02:09.319" clipEnd="00:02:11.840" src="ulysses.mp3"/>
+   </par>
+   <par id="p000039">
+    <text src="ulysses.txt#f000039"/>
+    <audio clipBegin="00:02:11.840" clipEnd="00:02:16.000" src="ulysses.mp3"/>
+   </par>
+   <par id="p000040">
+    <text src="ulysses.txt#f000040"/>
+    <audio clipBegin="00:02:16.000" clipEnd="00:02:18.960" src="ulysses.mp3"/>
+   </par>
+   <par id="p000041">
+    <text src="ulysses.txt#f000041"/>
+    <audio clipBegin="00:02:18.960" clipEnd="00:02:24.039" src="ulysses.mp3"/>
+   </par>
+   <par id="p000042">
+    <text src="ulysses.txt#f000042"/>
+    <audio clipBegin="00:02:24.039" clipEnd="00:02:26.800" src="ulysses.mp3"/>
+   </par>
+   <par id="p000043">
+    <text src="ulysses.txt#f000043"/>
+    <audio clipBegin="00:02:26.800" clipEnd="00:02:30.080" src="ulysses.mp3"/>
+   </par>
+   <par id="p000044">
+    <text src="ulysses.txt#f000044"/>
+    <audio clipBegin="00:02:30.080" clipEnd="00:02:32.319" src="ulysses.mp3"/>
+   </par>
+   <par id="p000045">
+    <text src="ulysses.txt#f000045"/>
+    <audio clipBegin="00:02:32.319" clipEnd="00:02:36.039" src="ulysses.mp3"/>
+   </par>
+   <par id="p000046">
+    <text src="ulysses.txt#f000046"/>
+    <audio clipBegin="00:02:36.039" clipEnd="00:02:42.080" src="ulysses.mp3"/>
+   </par>
+   <par id="p000047">
+    <text src="ulysses.txt#f000047"/>
+    <audio clipBegin="00:02:42.080" clipEnd="00:02:42.080" src="ulysses.mp3"/>
+   </par>
+   <par id="p000048">
+    <text src="ulysses.txt#f000048"/>
+    <audio clipBegin="00:02:42.080" clipEnd="00:02:46.439" src="ulysses.mp3"/>
+   </par>
+   <par id="p000049">
+    <text src="ulysses.txt#f000049"/>
+    <audio clipBegin="00:02:46.439" clipEnd="00:02:50.639" src="ulysses.mp3"/>
+   </par>
+   <par id="p000050">
+    <text src="ulysses.txt#f000050"/>
+    <audio clipBegin="00:02:50.639" clipEnd="00:02:53.759" src="ulysses.mp3"/>
+   </par>
+   <par id="p000051">
+    <text src="ulysses.txt#f000051"/>
+    <audio clipBegin="00:02:53.759" clipEnd="00:02:56.039" src="ulysses.mp3"/>
+   </par>
+   <par id="p000052">
+    <text src="ulysses.txt#f000052"/>
+    <audio clipBegin="00:02:56.039" clipEnd="00:02:58.240" src="ulysses.mp3"/>
+   </par>
+   <par id="p000053">
+    <text src="ulysses.txt#f000053"/>
+    <audio clipBegin="00:02:58.240" clipEnd="00:03:03.560" src="ulysses.mp3"/>
+   </par>
+   <par id="p000054">
+    <text src="ulysses.txt#f000054"/>
+    <audio clipBegin="00:03:03.560" clipEnd="00:03:05.680" src="ulysses.mp3"/>
+   </par>
+   <par id="p000055">
+    <text src="ulysses.txt#f000055"/>
+    <audio clipBegin="00:03:05.680" clipEnd="00:03:10.159" src="ulysses.mp3"/>
+   </par>
+   <par id="p000056">
+    <text src="ulysses.txt#f000056"/>
+    <audio clipBegin="00:03:10.159" clipEnd="00:03:13.560" src="ulysses.mp3"/>
+   </par>
+   <par id="p000057">
+    <text src="ulysses.txt#f000057"/>
+    <audio clipBegin="00:03:13.560" clipEnd="00:03:16.240" src="ulysses.mp3"/>
+   </par>
+   <par id="p000058">
+    <text src="ulysses.txt#f000058"/>
+    <audio clipBegin="00:03:16.240" clipEnd="00:03:21.120" src="ulysses.mp3"/>
+   </par>
+   <par id="p000059">
+    <text src="ulysses.txt#f000059"/>
+    <audio clipBegin="00:03:21.120" clipEnd="00:03:25.199" src="ulysses.mp3"/>
+   </par>
+   <par id="p000060">
+    <text src="ulysses.txt#f000060"/>
+    <audio clipBegin="00:03:25.199" clipEnd="00:03:29.719" src="ulysses.mp3"/>
+   </par>
+   <par id="p000061">
+    <text src="ulysses.txt#f000061"/>
+    <audio clipBegin="00:03:29.719" clipEnd="00:03:31.919" src="ulysses.mp3"/>
+   </par>
+   <par id="p000062">
+    <text src="ulysses.txt#f000062"/>
+    <audio clipBegin="00:03:31.919" clipEnd="00:03:35.319" src="ulysses.mp3"/>
+   </par>
+   <par id="p000063">
+    <text src="ulysses.txt#f000063"/>
+    <audio clipBegin="00:03:35.319" clipEnd="00:03:38.879" src="ulysses.mp3"/>
+   </par>
+   <par id="p000064">
+    <text src="ulysses.txt#f000064"/>
+    <audio clipBegin="00:03:38.879" clipEnd="00:03:42.680" src="ulysses.mp3"/>
+   </par>
+   <par id="p000065">
+    <text src="ulysses.txt#f000065"/>
+    <audio clipBegin="00:03:42.680" clipEnd="00:03:47.800" src="ulysses.mp3"/>
+   </par>
+   <par id="p000066">
+    <text src="ulysses.txt#f000066"/>
+    <audio clipBegin="00:03:47.800" clipEnd="00:03:51.919" src="ulysses.mp3"/>
+   </par>
+   <par id="p000067">
+    <text src="ulysses.txt#f000067"/>
+    <audio clipBegin="00:03:51.919" clipEnd="00:03:54.120" src="ulysses.mp3"/>
+   </par>
+   <par id="p000068">
+    <text src="ulysses.txt#f000068"/>
+    <audio clipBegin="00:03:54.120" clipEnd="00:03:56.680" src="ulysses.mp3"/>
+   </par>
+   <par id="p000069">
+    <text src="ulysses.txt#f000069"/>
+    <audio clipBegin="00:03:56.680" clipEnd="00:04:00.840" src="ulysses.mp3"/>
+   </par>
+   <par id="p000070">
+    <text src="ulysses.txt#f000070"/>
+    <audio clipBegin="00:04:00.840" clipEnd="00:04:03.520" src="ulysses.mp3"/>
+   </par>
+   <par id="p000071">
+    <text src="ulysses.txt#f000071"/>
+    <audio clipBegin="00:04:03.520" clipEnd="00:04:08.840" src="ulysses.mp3"/>
+   </par>
+   <par id="p000072">
+    <text src="ulysses.txt#f000072"/>
+    <audio clipBegin="00:04:08.840" clipEnd="00:04:11.680" src="ulysses.mp3"/>
+   </par>
+   <par id="p000073">
+    <text src="ulysses.txt#f000073"/>
+    <audio clipBegin="00:04:11.680" clipEnd="00:04:15.680" src="ulysses.mp3"/>
+   </par>
+   <par id="p000074">
+    <text src="ulysses.txt#f000074"/>
+    <audio clipBegin="00:04:15.680" clipEnd="00:04:22.600" src="ulysses.mp3"/>
+   </par>
+  </seq>
+ </body>
+</smil>
