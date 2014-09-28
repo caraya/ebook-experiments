@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="en" unique-identifier="pub-id">
+<!--I'm assuming prefixes for marc, onix, and xsd are predefined-->
+
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<dc:title id="title">Moby-Dick</dc:title>
+<meta refines="#title" property="title-type">main</meta>
+
+<dc:creator id="creator">Herman Melville</dc:creator>
+<meta refines="#creator" property="file-as">MELVILLE, HERMAN</meta>
+<meta refines="#creator" property="role" scheme="marc:relators">aut</meta>
+
+<dc:identifier id="pub-id">urn:isbn:9780316000000</dc:identifier>
+<meta refines="#pub-id" property="identifier-type" scheme="onix:codelist5">15</meta>
+
+
+
+
+<dc:language>en-US</dc:language>
+
+<meta property="dcterms:modified">2012-01-13T01:13:00Z</meta>
+
+<dc:publisher>Harper &amp; Brothers, Publishers</dc:publisher>
+
+<dc:contributor id="contrib1">Dave Cramer</dc:contributor>
+<meta refines="#contrib1" property="role" scheme="marc:relators">mrk</meta>
+
+
+    <!--MEDIA OVERLAY METADATA-->
+    <meta property="media:duration" refines="#chapter_001_overlay">0:14:20.500</meta>
+    <meta property="media:duration" refines="#chapter_002_overlay">0:09:03.000</meta>
+    <meta property="media:duration">0:23:23.500</meta>
+    <meta property="media:narrator">Stuart Wills</meta>
+
+    <meta property="media:active-class">-epub-media-overlay-active</meta>
+  </metadata>
+  <manifest>
+    <item id="font.stix.regular" href="fonts/STIXGeneral.otf" media-type="application/vnd.ms-opentype"/>
+    <item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="toc" properties="nav" href="toc.xhtml" media-type="application/xhtml+xml"/>
+    <item id="titlepage" href="titlepage.xhtml" media-type="application/xhtml+xml"/>
+    <item id="xchapter_001" href="chapter_001.xhtml" media-type="application/xhtml+xml" media-overlay="chapter_001_overlay"/>
+    <item id="chapter_001_audio" href="audio/mobydick_001_002_melville.mp4" media-type="audio/mp4"/>
+
+
+<!--
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+ -->
+
+</manifest>
+  <spine>
+    <itemref idref="cover" linear="no"/>
+    <itemref idref="titlepage" linear="yes"/>
+<itemref idref="brief-toc" linear="yes"/>
+    <itemref linear="yes" idref="xchapter_001"/>
+
+<itemref idref="toc" linear="no"/>
+  </spine>
+</package>
