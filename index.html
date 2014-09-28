@@ -55,6 +55,7 @@ Work on incorporating epub:type and WARIA roles to the book</p>
 
 <p>Using the first two chapters of Peter Pan (see above), with additional content tailored for testing, we test multiple open sourced fonts in different styles and weights to see which one looks best for which book. Because we want to test the font, so we will not subset them. This way you can crack the book open and use the fonts contained in it.</p>
 
+<p>Please note that all the fonts listed in this page use the SIL <a href='http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL'>Open Font License</a>, a similar license or permission has been sought from the author. Check each font's epub for additional information.</p>
 
 <ul>
   <li>Original book without web fonts (<a href='https://github.com/caraya/ebook-experiments/raw/master/font-ebooks/peter-pan-epub-no-font.zip'>zipped source</a> -- <a href='https://github.com/caraya/ebook-experiments/raw/master/font-ebooks/peter-pan-epub-no-font.epub'>epub</a>)</li>
@@ -114,13 +115,32 @@ Work on incorporating epub:type and WARIA roles to the book</p>
 <h2>
 <a name="long-form-publishing" class="anchor" href="#long-form-publishing"><span class="octicon octicon-link"></span></a>Long form publishing</h2>
 
-<p>How far can we take technologies that are still in development and use them to create long-form content for the web?</p>
+<p>How far can we take technologies that are still in development and use them to create long-form content for the web? Can we replicate these long form pieces in ebook readers?</p>
 
 <h2>
 <a name="ebook-styleguide" class="anchor" href="#ebook-styleguide"><span class="octicon octicon-link"></span></a>ebook styleguide</h2>
+        
 
 <p>Just as with web sites/appps, we need to have a standard styleguide for ebooks. This is a first attempt at doing this and it's likely to be incomplete. Still it's a good starting point for others to improve on the idea and have samples to present to prospects :-)</p>
-      </section>
+
+<h2>
+<a name="synhronized-books" class="anchor" href="#synhronized-books"><span class="octicon octicon-link"></span></a>Synchronized audio books</h2>
+
+<p>A very intriguing aspect of the epub3 specification is the ability to use SMIL overlays to create synchronized text and audion books</p>
+
+<h2>
+<a name="xml-gen" class="anchor" href="#xml-gen"><span class="octicon octicon-link"></span></a>Package generation script</h2>
+
+<p>First pass at a Python script to generate the package file for epub ebooks. The script was created primarily to reduce the manual work of listing the files in both the manifest and the spine.</p>
+
+<p>The <a href="https://github.com/caraya/ebook-experiments/tree/master/python-xml-gen">Github Repository</a> contains working versions of the script and an example package.opf showing the result.</p>
+
+<h2>
+<a name="zen-garden" class="anchor" href="#zen-garden"><span class="octicon octicon-link"></span></a>Mirror of Epub Zen Garden</h2>
+
+<p>To make sure it survived I created a mirror of the <a href="http://caraya.github.io/epub-zen/">Epub Zen Garden</a> and hosted it in Github.</p>
+
+</section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/caraya">caraya</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
