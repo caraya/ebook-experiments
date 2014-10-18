@@ -6,9 +6,11 @@ Updated:    12/14/12
 Updated by: Carlos
 --------------------------------
 */
+// VARIABLES WE USE WITH EBOOK-SPECIFIC CODE
 $epub: false;
 $kindle: false;
 
+// PARTIALS WILL BE IMPORTED IN THE ORDER THEY APPEAR
 @import "_variables";
 @import "_mixins";
 @import "_normalize";
@@ -21,11 +23,36 @@ $kindle: false;
 @import "_toc";
 @import "_images";
 @import "_footnotes";
-@import "_asides";
-@import "_misc";
-// Note that this file only contains the results of mediaquery work, not the mixins
-// See _mixin.scss for the actual mixins
+
+// Note that this file only contains the results of mediaquery 
+// work, not the mixins See _mixin.scss for the actual mixins
 // Currently not in use.
 @import "_media-queries";
+// Separate mixin for hdpi media queries
+@import "_hdpi-mediaqueries";
+
 // For more information about modular scales, check https://github.com/Team-Sass/modular-scale
 @import "_modular-scale.scss";
+
+//
+// Generic styles
+//
+// We need to switch the fonts for the one we are really using
+// or remove them altogether. These are dependent on the fonts
+// we define with the fonts mixin
+em {
+  font-family: 'SourceSans LightIt';
+}
+
+strong {
+  font-family: 'SourceSans SemiBold';
+}
+
+em strong,
+strong em { /* order of em and strong doesn't matter*/
+  font-family: 'SourceSans SemiBoldIt';
+}
+
+pre {
+  font-family: 'SourceSans Light'
+}

@@ -18,22 +18,6 @@ $kindle: false;
 
 @import "_fonts";
 
-@font-face { /* Default font... SourceSans Pro in this case*/
-  @include declare-font('SourceSans Light',  'type/SourceSansPro-Light', 'normal', 'normal')
-}
-
-@font-face { /* Italic font */
-  @include declare-font('SourceSans LightIt',  'type/SourceSansPro-LightIt', 'italic', 'normal')
-}
-
-@font-face { /* bold/semibold font*/
-  @include declare-font('SourceSans SemiBold',  'type/SourceSansPro-Semibold', 'normal', 'bold')
-}
-
-@font-face { /* bold/semibold  italic font*/
-  @include declare-font('SourceSans SemiBoldIt',  'type/SourceSansPro-SemiboldIt', 'italic', 'bold')
-}
-
 /*
  * Global style definitions
  *
@@ -55,7 +39,7 @@ html {
  *
  * Had originally moved to its own partial but since they depend on the fonts we've selected
  * I decided to leave it here
- */
+
 
 em {
   font-family: 'SourceSans LightIt';
@@ -66,14 +50,14 @@ strong {
 }
 
 em strong,
-strong em { /* order of em and strong doesn't matter*/
+strong em {
   font-family: 'SourceSans SemiBoldIt';
 }
 
 pre {
   font-family: 'SourceSans Light'
 }
-
+*/
 /*
  * These are the basic elements of a page. I recomend keeping these
  *
@@ -93,8 +77,6 @@ pre {
 @import "_toc";
 @import "_images";
 @import "_footnotes";
-@import "_asides";
-
 
 /*
  * We place media queries last as they may change the page display

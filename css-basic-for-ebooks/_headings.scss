@@ -1,6 +1,4 @@
-/*
-  Headings
-*/
+// Headings
 
 h1, h2, h3, h4, h5, h6 {
   hyphens: none;
@@ -31,10 +29,10 @@ h4 {
   margin-bottom: 20px;
 }
 
-/* Chapter title style
- *
- * We center the h1 chapter title
-*/
-section h1 { /* The title is always the first child of the section element*/
+// Chapter title style
+// We center the h1 chapter title
+
+// The title is always the first child of the section element
+section h1 { 
   text-align: center;
 }

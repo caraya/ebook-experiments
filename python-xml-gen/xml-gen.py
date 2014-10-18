@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python 
 import mimetypes
 import glob
 import os
@@ -12,7 +12,7 @@ package = open('package.opf', 'w')
 # The glob below should encompass everything under 
 # OEBPS. Right now I'm trying to remove empty directories
 # and the package_content variable. 
-# WARNING: This glong will add all files and directories 
+# WARNING: This glob will add all files and directories 
 # to the variable. You will have to edit the file and remove
 # empty directories and the package.opf file reference from
 # both the manifest and the spine
@@ -42,6 +42,7 @@ template_top = '''<package xmlns="http://www.idpf.org/2007/opf"
       <dc:language>en</dc:language>
       <dc:identifier id="book-id"></dc:identifier>
       <meta name="cover" content="img-cov" />
+  </metadata>
   <manifest>
   '''
 template_transition = '''</manifest>

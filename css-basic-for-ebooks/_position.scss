@@ -4,13 +4,14 @@
 // http://hugogiraudel.com/2013/08/05/offsets-sass-mixin/
 
 // variables were moved to _variables.scss file
+// which needs to be included before this
 
 // @private
 @mixin _position($type,
-                 $top: $position-default-top,
-                 $right: $position-default-right,
-                 $bottom: $position-default-bottom,
-                 $left: $position-default-left) {
+  $top: $position-default-top,
+  $right: $position-default-right,
+  $bottom: $position-default-bottom,
+  $left: $position-default-left) {
   $allowed_types: 'absolute' 'relative' 'fixed';
 
   @if not index($allowed_types, $type) {
@@ -31,13 +32,17 @@
   @include _position(absolute, $top, $right, $bottom, $left);
 }
 
-@mixin relative($top: $position-default-top, $right: $position-default-right,
-                $bottom: $position-default-bottom, $left: $position-default-left) {
+@mixin relative($top: $position-default-top, 
+  $right: $position-default-right,
+  $bottom: $position-default-bottom, 
+  $left: $position-default-left) {
   @include _position(relative, $top, $right, $bottom, $left);
 }
 
-@mixin fixed($top: $position-default-top, $right: $position-default-right,
-                $bottom: $position-default-bottom, $left: $position-default-left) {
+@mixin fixed($top: $position-default-top, 
+  $right: $position-default-right,
+  $bottom: $position-default-bottom, 
+  $left: $position-default-left) {
   @include _position(fixed, $top, $right, $bottom, $left);
 }
 

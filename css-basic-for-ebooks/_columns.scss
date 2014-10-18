@@ -1,16 +1,19 @@
-/* This mixin will create column attributes for the element it's called in
- * It uses variables to make life easier. Rather than code multiple attribute
- * sets we use a single set that takes 2 attributes.
- *
- * We use number of columns rather than width for convenience.
- * Counting width means we have to do percentages or be very strict in the width
- * of our content.
- *
- * See https://developer.mozilla.org/en-US/docs/Web/CSS/column-width
- * for more informtion on specifying column width in CSS
-*/
+// This mixin will create column attributes for the element
+// it's called in
+// It uses variables to make life easier. Rather than code
+// multiple attribute sets we use a single set that takes 2
+// attributes and defaults the other 2.
+
+// We use number of columns rather than width for convenience.
+// Counting width means we have to do percentages or be very
+// strict in the width of our content.
+
+// See https://developer.mozilla.org/en-US/docs/Web/CSS/column-width 
+// for more information on specifying column width in CSS
+
 @mixin column-attribs ($cols, $gap, $fill: balance, $span: none){
-  // How many columns-moz-column-count: $cols;
+  // How many columns?
+  -moz-column-count: $cols;
   -webkit-column-count: $cols;
   column-count: $cols;
   // Space between columns
@@ -25,13 +28,15 @@
   -moz-column-span: $span;
   -webkit-column-span: $span;
   column-span: $span;
+}
 
-/*
- * The classes below use the mixin to create 2 and 3-column layouts
- *
- * The 3-column layout adds a class to handle lists by removing the 
- * list symbol and giving the class a top and bottom margin of 20px
-*/
+// The classes below use the mixin to create 2 and 
+// 3-column layouts
+//
+// The 3-column layout adds a class to handle lists by
+// removing the list symbol and giving the class a top and
+// bottom margin of 20px
+
 .columns2 {
   width: 100%;
 	@include column-attribs (2, 20px);

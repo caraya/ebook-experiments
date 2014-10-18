@@ -1,10 +1,6 @@
-/*
-	iframe format for embedded content
-*/
+// MULTIMEDIA ELEMENT FORMATTING
 
-@mixin media-element () {
-}
-
+// iframe format for embedded content
 iframe {
   display: block;
   margin: 20px auto;
@@ -12,9 +8,7 @@ iframe {
   @include solid-thin;
 }
 
-/*
-	video tag format
-*/
+// video tag format
 .video video {
   margin: 20px auto;
   border-color: $red;

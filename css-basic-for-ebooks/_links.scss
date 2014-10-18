@@ -1,12 +1,12 @@
-/*
-  Link Formatting
-*/
+// Link Formatting
 
-a { /* All links are the same color (defined in _variables.scss) */
+// All links are the same color (defined in _variables.scss)
+a { 
   color: $red;
 }
 
-a { /* Internal links have no underline and a hover value*/
+// Internal links have no underline and a hover value
+a { 
   text-decoration: none;
 
   [href]:hover {
@@ -14,6 +14,8 @@ a { /* Internal links have no underline and a hover value*/
   }
 }
 
-a[href^="http"] { /* if the link's href attribute starts with http (which means both http AND https) underline the links*/
+// if the link's href attribute starts with http 
+// (which means both http AND https) underline the links
+a[href^="http"] { 
   text-decoration: underline;
 }
